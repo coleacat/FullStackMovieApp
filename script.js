@@ -1,6 +1,6 @@
 const APILINK = 'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1&api_key=e40256f14fab7e30089fdc292a482bdf';
 const IMG_PATH = 'https://image.tmdb.org/t/p/w1280';
-const SEARCHAPI = "https://api.themoviedb.org/3/movie?&api_key=e40256f14fab7e30089fdc292a482bdf&query=";
+const SEARCHAPI = "https://api.themoviedb.org/3/search/movie?api_key=e40256f14fab7e30089fdc292a482bdf&query=";
 
 const main = document.getElementById("section");
 const form = document.getElementById("form");
