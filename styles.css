@@ -19,25 +19,59 @@ h3 {
 }
 
 .topnav a{
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    text-transform: uppercase;
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: colorChange 10s linear infinite;
+    display: inline-block;
+    font-size: 6vw;
+    font-family: 'Varela Round', sans-serif;
+
+    
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #231557;
+    }
+    25% {
+        background-color: #44107a;
+    }
+    50% {
+        background-color: #ff1361;
+    }
+    75% {
+        background-color: #44107a;
+    }
+    100% {
+        background-color: #231557;
+    }
 }
 
 .topnav .search-container{
     float: right;
+    width: 100%;
+    height: fit-content;
+    max-width: 25rem; 
+    text-align: left; 
+    align-items: center;
+}
 
+#query {
+    width: 100%;
+    padding: 1rem; /* Use rem units for padding */
+    font-size: 1rem; /* Use rem units for font size */
 }
 
 form {
     background-color: #151f30;
-    width: 300px;
-    height: 43px;
+    max-width: 100%; /* Ensure the form doesn't exceed the width of its container */
+    width: auto; /* Let the form adjust its width based on content */
+    padding: 10px; /* Add padding for better spacing */
     border-radius: 11px;
     display: flex;
     align-items: center;
@@ -53,16 +87,21 @@ input {
 }
 
 .thumbnail {
-	height: 300px;
-	width: 200px;
-	border-radius: 19px;
+	max-height: 300px;
+	max-width: 200px;
+    border-radius: 19px;
+    transition: transform 0.2s ease-in-out; /* Add a smooth transition for the transform property */
+}
+
+.thumbnail:hover {
+    transform: scale(1.05); /* Enlarge the thumbnail by 5% on hover */
 }
 
 .column {
 	float: left;
-	width: 25%;
+	max-width: 33%;
+    width: 33%;
 	padding: 10px 10px;
-
 }
 
 .card {
